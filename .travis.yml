@@ -1,1 +1,11 @@
 language: java
+
+addons:
+  sonarcloud:
+    organization: "project-quatum"
+    token:
+      secure: "jnjVB9fQbTL+gQgbWqjXUutwDbFJsJH1vty2NHVhj+a6aOgZChGgFg11gSu4YMfzUA87bykeTWo0xwMu3WbTNdTjg1ApkMqVFgsNW65B25JynsaNyoRDUk5xVWyJ1IuSMmZhkDbM9Z742n5rV3MqXimtIQ9TXQ1pnKKuQL+voz791zPfIUbP9rljpMlD8TpllASGE+qafWOMWiACuOzTb8B8Euuc+Z/Tizft4piSReMI+7+zt1nWe17IM9wwF7mHXGtjUY2cQOUDW04DN+3WrCOzC/oiaHx/D1CSRGWFnV14xCV0lMyqvpnUurvRugRKkKTc32aHJpuHJtlkrT+qWnsWmq2hfDFiLSjHZJyJxfP8wDMuE5RIMCGJs1XYkI6Fg/C7VWeR1j4E/UK3RgCLvzHiW7BMK5acjbEBa3Wd7gvbaItMjoLkNYebjTxy6FeH8l+HGd8xYMGKyiS34CYxHV1gOIfyKseKo6GzOvGVvoG3c8PQjkhFK78k+J0l+YYdBSlpg0eZUIXAAgTh/xjMCYGt/PKQaUB3p7aEWZ3ktpAQZ7//cFNZfDc3GOD4aG5BKmrtsc7agVcEKIrtbTSnm3STj9Ogyc5E82hPqD7B0s6WtBhn6tzkJZBtxaQhiTbWvqxXPtwgkkK4e53xY3gfHwN7Y1N0O4BVmH9LjKB3yS4=" # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=Project-Quatum_Project-Quantum
