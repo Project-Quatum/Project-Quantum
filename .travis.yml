@@ -1,15 +1,5 @@
 language: java
 
-# https://docs.travis-ci.com/user/reference/xenial/#jvm-clojure-groovy-java-scala-support
-jdk:
-  - oraclejdk12
-  - openjdk8
-  - openjdk11
-
-before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq fonts-liberation
-
 addons:
   sonarcloud:
     organization: "project-quatum"
@@ -18,4 +8,4 @@ addons:
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=Project-Quatum_Project-Quantum
+  - mvn clean verify sonar:sonar -Dsonar.login=$AuthToken -Dsonar.projectKey=Project-Quatum_Project-Quantum -DskipTests
