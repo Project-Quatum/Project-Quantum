@@ -42,10 +42,6 @@
     <url>http://svn.apache.org/viewvc/pdfbox/trunk</url>
   </scm>
 
-  <!-- <properties>
-        <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-  </properties> -->
-
   <modules>
     <module>parent</module>
     <module>fontbox</module>

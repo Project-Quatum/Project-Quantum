@@ -5,7 +5,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ sonar-cloud-travis ]
+    branches:
+      - main
+      - release/**
   pull_request:
     branches: [ main ]
 
