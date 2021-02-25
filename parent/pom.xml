@@ -56,7 +56,7 @@
              https://maven.apache.org/surefire/maven-surefire-plugin/faq.html#late-property-evaluation
         -->
         <surefireArgLine></surefireArgLine>
-        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
       </properties>
 
     <dependencyManagement>
