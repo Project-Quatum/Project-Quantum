@@ -56,6 +56,7 @@
              https://maven.apache.org/surefire/maven-surefire-plugin/faq.html#late-property-evaluation
         -->
         <surefireArgLine></surefireArgLine>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
       </properties>
 
     <dependencyManagement>
@@ -245,6 +246,13 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
+                    </execution>
+                    <execution>
+                        <id>report_sonar</id>
+                        <goals>
+                            <goal>report-aggregate</goal>
+                        </goals>
+                        <phase>install</phase>
                     </execution>                
                 </executions>
             </plugin>
